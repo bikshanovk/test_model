@@ -1,8 +1,13 @@
 #!/usr/bin/python3
+
 import subprocess
 import sys
 
-image_name = "test"
+commit_id       =   ''
+dataset_path    =   '192.168.2.10:/shared/dataset'
+image_name      =   "test"
+model_version   =   '1.2'
+targets         =   ['CPU_linux','GPU_linux','CPU_windows','GPU_windows']
 
 print("Getting commit_id...")
 commit_id_process = subprocess.Popen(['git', 'rev-parse', 'HEAD'],
